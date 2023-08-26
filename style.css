@@ -1,0 +1,157 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #272727;
+    position: relative;
+}
+
+h1{
+    position: absolute;
+    top: 20%;
+    font-size: 3rem;
+    color: #fff;
+}
+
+h1::before{
+    content: "Social Media Buttons Animation";
+    color: crimson;
+    position: absolute;
+    transform: translate(0.5%, 3%);
+    z-index: -1;
+}
+
+.socialMediaLinksBox{
+    position: absolute;
+    left: 20%;
+    padding: 14px 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+    padding: 15px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.socialMediaLinksBox .socialMediaBtn a{
+    z-index: 99;
+    transition: background-color .3s ease;
+}
+
+.socialMediaLinksBox:hover{
+    width: 600px;
+}
+
+.socialMediaLinksBox:hover .socialMediaBtn a{
+    background-color: crimson;
+}
+
+.socialMediaBtn .socialMediaLinks a{
+    padding: 16px;
+    z-index: -1;
+    background-color: crimson;
+    overflow: hidden;
+    position: absolute;
+    transform: translate(10%, -69%);
+    transition: transform 0.3s ease, background-color 0.3s ease, z-index 0s ease 0.12s;
+}
+
+.socialMediaLinksBox:hover .socialMediaLinks a{
+    background-color: black;
+    z-index: 99;
+}
+
+.socialMediaLinksBox:hover .socialMediaLinks a.facebookLink{
+    transform: translate(140%, -70%);
+}
+
+.socialMediaLinksBox:hover .socialMediaLinks a.instagramLink{
+    transform: translate(250%, -70%);
+}
+
+.socialMediaLinksBox:hover .socialMediaLinks a.twitterLink{
+    transform: translate(470%, -70%);
+}
+
+.socialMediaLinksBox:hover .socialMediaLinks a.whatsappLink{
+    transform: translate(445%, -70%);
+}
+
+.socialMediaLinks a::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -45%) scale(0.1);
+    border-radius: 50px;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.socialMediaLinks a::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -50%) scaleY(0);
+    border-radius: 50px;
+    z-index: -2;
+    transition: transform 0.3s ease;
+}
+
+.socialMediaLinks a:hover::before{
+    transform: translate(-50%, -50%) scaleY(1);
+}
+
+.socialMediaLinks a:hover::after{
+    transform: translate(-50%, -50%) scaleY(1);
+}
+
+.socialMediaLinks a.facebookLink::before{
+    background-color: #00aeff;
+}
+
+.socialMediaLinks a.facebookLink::after{
+    background-color: #003ce2;
+}
+
+.socialMediaLinks a.instagramLink::before{
+    background-color: #ff39f5;
+}
+
+.socialMediaLinks a.instagramLink::after{
+    background-color: #a30882;
+}
+
+.socialMediaLinks a.twitterLink::before{
+    background-color: #0088ff;
+}
+
+.socialMediaLinks a.twitterLink::after{
+    background-color: #004094;
+}
+
+.socialMediaLinks a.whatsappLink::before{
+    background-color: #50ff0b;
+}
+
+.socialMediaLinks a.whatsappLink::after{
+    background-color: #008300;
+}
